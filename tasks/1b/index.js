@@ -1,0 +1,1 @@
+require('fs').readFile(`${__dirname}/data.txt`,(_,data) => console.log(data.toString().split('\n').map((x,i,arr) => +x+(+arr[i+1]||0)+(+arr[i+2]||0)).reduce((acc,val,j) => [val,j && val>acc[0]?++acc[1]:acc[1]],[0,0])[1]));
