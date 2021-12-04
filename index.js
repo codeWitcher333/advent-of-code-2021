@@ -1,1 +1,1 @@
-require('fs').readFile(`./tasks/${process.argv.slice(2)[0]}/data.txt`,(_,data) => console.log(require(`./tasks/${process.argv.slice(2)[0]}`)(data)));
+require('fs').readFile(`./tasks/${process.argv.slice(2)[0]}/data.txt`,(_,data) => console.log(require(`./tasks/${process.argv.slice(2)[0]}`)(data.toString().split('\n'))));
