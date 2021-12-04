@@ -1,1 +1,1 @@
-module.exports = data => data.toString().split('\n').reduce((acc,val) => val.includes('forward')?[+val.replace(/\D/g,'')+acc[0],acc[1]]:val.includes('up')?[acc[0],-+val.replace(/\D/g,'')+acc[1]]:[acc[0],+val.replace(/\D/g,'')+acc[1]],[0,0]).reduce((a, b) => a*b, 1);
+module.exports = data => data.reduce((acc,val) => val.includes('forward')?[+val.replace(/\D/g,'')+acc[0],acc[1]]:val.includes('up')?[acc[0],-+val.replace(/\D/g,'')+acc[1]]:[acc[0],+val.replace(/\D/g,'')+acc[1]],[0,0]).reduce((a, b) => a*b, 1);

@@ -1,1 +1,1 @@
-module.exports = data => data.toString().split('\n').reduce((acc,val) => [val,val>acc[0]?++acc[1]:acc[1]],['',0])[1];
+module.exports = data => data.reduce((acc,val) => [val,val>acc[0]?++acc[1]:acc[1]],['',0])[1];
