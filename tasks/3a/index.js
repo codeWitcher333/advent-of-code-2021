@@ -1,0 +1,1 @@
+module.exports = data => data.reduce((acc,val) => acc.map((x,i) => +val[i]?[x[0],x[1]+1]:[x[0]+1,x[1]]),Array(12).fill([0,0])).reduce((acc,val) => [acc[0]+(val[0]>val[1]?'0':'1'),acc[1]+(val[0]>val[1]?'1':'0')],['','']).reduce((acc,val) => parseInt(val, 2)*acc,1);
